@@ -1,0 +1,85 @@
+$('selector').load('page',function(){
+    // function de retour executé uniquement après le chargement de la page
+    });
+le contenu de la page sera inséré dans l'élément 'selector'
+
+------------------------------------------------------
+
+GET - Requests data from a specified resource
+
+GET is basically used for just getting (retrieving) some data from the server. Note: The GET method may return cached data.
+
+$.get('page',{name :'jean'}, function(data){
+    // data contient le code source de la page
+    // function executé uniquement en cas de réussite
+
+}).fail(function(){
+    // function exectué uniquement que si la requête échoue
+
+}).always(function(){
+    // function executée dans tous les cas de figure échec ou réussite de la requête
+});
+
+-------------------------------------------------------
+
+POST - Submits data to be processed to a specified resource
+
+POST can also be used to get some data from the server. However, the POST method NEVER caches data, and is often used to send data along with the request.
+
+$.post('page',{name :'jean'}, function(data){
+    // data contient le code source de la page
+    // function executé uniquement en cas de réussite
+
+}).fail(function(){
+    // function exectué uniquement que si la requête échoue
+
+}).always(function(){
+    // function executée dans tous les cas de figure échec ou réussite de la requête
+});
+
+---------------------------------------------------------
+
+GETSCRIPT - va chercher un script et va l'exécuter
+
+$.getScript('test.js', function(){
+    // function de retour si success
+});
+
+
+----------------------------------------------------------
+
+GETJSON - récupère le JSON de la page et l'intégre dans data
+
+$.getJSON('page.JSON', function(data){
+    // function de retour
+});
+
+--------------------------------------------------------
+AJAX - Permet de faire une requete perso
+
+$.ajax({
+    type: 'GET', // GET, POST, PUT
+    url: 'exemple.php', // page à charger
+    dataType: 'html', // html, json, text, xml, script
+    data: {
+        optionnel pour envoi de données aux serveurs
+    },
+    timeout: temps découlé avant échoué en ms,
+    success: function(){
+        lu en cas de succès
+    },
+    error: function(){
+        lu en cas d'error
+    },
+    beforeSend: function(){
+        exécuté dans tous les cas
+    },
+    complete: function(){
+        exécuté dans tous les cas après la requête
+    },
+    statusCode{
+        404: function(){
+        exécuté en cas de 404
+        }
+    },
+})
