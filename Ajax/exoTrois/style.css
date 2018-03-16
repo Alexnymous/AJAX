@@ -1,0 +1,46 @@
+h3{
+    text-align: center;
+}
+
+.formulaire{
+    background-color: #d2d2d2;
+    border-radius: 10px;
+    height:auto;
+    padding:10px;
+    font-size:1.2em;
+    width: 300px;
+    margin: 10px auto;
+}
+
+.formulaire #email{
+    width: 250px;
+    height: 30px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.formulaire #password{
+    width: 250px;
+    height: 30px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.formulaire #submit{
+    margin: 1px auto;
+}
+
+
+.formulaire input:focus{
+    box-shadow: -1px 1px 10px 1px #74edeb;
+    transition: width 0.4s ease-in-out;
+}
+
+.success{
+    color: green;
+}
+
+
+.formulaire [type=submit]{
+    text-align: center;
+}
+
